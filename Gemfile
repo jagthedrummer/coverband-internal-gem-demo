@@ -46,3 +46,5 @@ group :development do
   gem 'spring'
 end
 
+# In-project engine
+gemspec path: 'interal_full_mountable_gem'

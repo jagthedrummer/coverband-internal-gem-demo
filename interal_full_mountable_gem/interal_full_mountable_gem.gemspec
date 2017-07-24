@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = InteralFullMountableGem::VERSION
   s.authors     = ["Jeremy Green"]
   s.email       = ["jeremy@octolabs.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of InteralFullMountableGem."
-  s.description = "TODO: Description of InteralFullMountableGem."
+  s.homepage    = ""
+  s.summary     = ""
+  s.description = ""
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
