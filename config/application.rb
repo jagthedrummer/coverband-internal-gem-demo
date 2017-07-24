@@ -31,5 +31,8 @@ module CoverbandInternalGemDemo
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Coverband use Middleware
+    config.middleware.use Coverband::Middleware
   end
 end

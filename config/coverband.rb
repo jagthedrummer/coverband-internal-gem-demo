@@ -1,11 +1,11 @@
 Coverband.configure do |config|
   config.root              = Dir.pwd
 
-  if defined? Redis
-    config.redis           = Redis.new(:host => 'redis.host.com', :port => 49182, :db => 1)
-  end
+  #if defined? Redis
+    #config.redis           = Redis.new(:host => 'redis.host.com', :port => 49182, :db => 1)
+  #end
   # don't want to use redis, store to file system ;)
-  # config.coverage_file           = './tmp/coverband_coverage.json'
+  config.coverage_file           = './tmp/coverband_coverage.json'
 
   # DEPRECATED now will use redis or file store
   # config.coverage_baseline = Coverband.parse_baseline
@@ -13,7 +13,7 @@ Coverband.configure do |config|
   config.root_paths        = ['/app/'] # /app/ is needed for heroku deployments
   # regex paths can help if you are seeing files duplicated for each capistrano deployment release
   #config.root_paths       = ['/server/apps/my_app/releases/\d+/']
-  config.ignore            = ['vendor','lib/scrazy_i18n_patch_thats_hit_all_the_time.rb']
+  config.ignore            = ['config', 'vendor','lib/scrazy_i18n_patch_thats_hit_all_the_time.rb']
   # Since rails and other frameworks lazy load code. I have found it is bad to allow
   # initial requests to record with coverband. This ignores first 15 requests
   # NOTE: If you are using a threaded webserver (example: Puma) this will ignore requests for each thread
