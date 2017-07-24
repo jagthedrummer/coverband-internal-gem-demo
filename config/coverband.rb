@@ -10,7 +10,8 @@ Coverband.configure do |config|
   # DEPRECATED now will use redis or file store
   # config.coverage_baseline = Coverband.parse_baseline
 
-  config.root_paths        = ['/app/'] # /app/ is needed for heroku deployments
+  config.include_gems = true
+  config.root_paths        = ['/app/', '/interal_full_mountable_gem/app/'] # /app/ is needed for heroku deployments
   # regex paths can help if you are seeing files duplicated for each capistrano deployment release
   #config.root_paths       = ['/server/apps/my_app/releases/\d+/']
   config.ignore            = ['config', 'vendor','lib/scrazy_i18n_patch_thats_hit_all_the_time.rb']
